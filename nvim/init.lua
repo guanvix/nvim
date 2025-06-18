@@ -1,3 +1,12 @@
+-- init.lua
+vim.opt.number = true  -- 显示行号
+vim.opt.cursorline = true
+vim.opt.numberwidth = 2
+vim.opt.tabstop = 4      -- 1个Tab显示为4个空格宽度
+vim.opt.shiftwidth = 4   -- 自动缩进时使用4个空格
+vim.opt.softtabstop = 4  -- 退格键删除时当作4个空格处理
+vim.opt.expandtab = true -- 将Tab转换为空格（关键设置！）
+
 require("config.lazy")
 
 require'nvim-web-devicons'.setup {

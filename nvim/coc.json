@@ -1,0 +1,31 @@
+{
+  // 禁用 bash-language-server（如果之前配置过）
+  "languageserver.bashls.enable": false,
+  
+  // 启用 shellcheck 诊断
+  "diagnostic-languageserver.filetypes": {
+    "sh": "shellcheck",
+    "bash": "shellcheck"
+  },
+  "diagnostic-languageserver.formatFiletypes": {
+    "sh": "none",
+    "bash": "none"
+  },
+  
+  // 优化诊断显示（使用你的 Nerd Font 图标）
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "󰌶",
+  "diagnostic.signPriority": 10,
+  
+  // 可选：shellcheck 自定义规则
+  "diagnostic-languageserver.linters": {
+    "shellcheck": {
+      "command": "shellcheck",
+      "args": ["--format", "json", "--source-path=/path/to/scripts"],
+      "rootPatterns": [".git/", "Makefile"],
+      "debounce": 100
+    }
+  }
+}
